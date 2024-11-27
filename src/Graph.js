@@ -14,7 +14,7 @@ import { useData } from './DataContext';
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend);
 
 const Graph = () => {
-    const { diagnosticData } = useData();
+    const { diagnosticData, selectedIndex, updateIndex } = useData();
     const [systolicValue, setSystolicValue] = useState(null); 
     const [diastolic, setDiastolic] = useState(null); 
     
@@ -99,6 +99,10 @@ const Graph = () => {
         // const value = chartData.datasets[datasetIndex].data[index]; // Value
         // const datasetLabel = chartData.datasets[datasetIndex].label; // Dataset name
 
+
+        updateIndex(index);
+
+        
         const value2 = chartData.datasets[0].data[index]; // Value
         setSystolicValue(value2);
         const datasetLabel2 = chartData.datasets[0].label; // Dataset name

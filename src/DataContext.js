@@ -11,6 +11,12 @@ export const useData = () => {
 export const DataProvider = ({ children }) => {
   const [diagnosticData, setDiagnosticData] = useState([]); // State to hold formatted data
 
+  const [selectedIndex, setSelectedIndex] = useState(0); // New state to store the index
+
+  const updateIndex = (index) => {
+    setSelectedIndex(index);
+  };
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -31,6 +37,7 @@ export const DataProvider = ({ children }) => {
           }));
 
         setDiagnosticData(formattedData); // Update state with formatted data
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -40,7 +47,7 @@ export const DataProvider = ({ children }) => {
   }, []);
 
   return (
-    <DataContext.Provider value={{ diagnosticData }}>
+    <DataContext.Provider value={{ diagnosticData, selectedIndex, updateIndex }}>
       {children} {/* Wrap the children components with the provider */}
     </DataContext.Provider>
   );
