@@ -1,0 +1,73 @@
+/* Header container with rounded corners and defined width */
+.headerContainer {
+    width: 700px;
+    display: flex;
+    /* justify-content: space-between; */
+    background: #F6F7F8;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Header cell styling */
+  .th {
+    padding: 0.75rem;
+    font-weight: bold;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  
+  /* Table column widths (consistent with header) */
+  .column1 {
+    width: 23%; /* First column: 40% of the total width */
+    text-align: left;
+  }
+  
+  .column2 {
+    width: 50%; /* Second column: 40% of the total width */
+    text-align: left;
+  }
+  
+  .column3 {
+    width: 20%; /* Third column: 20% of the total width */
+    text-align: left;
+  }
+  
+  /* Table row hover effect */
+  .tr:hover {
+    background-color: #f1f5f9;
+  }
+  
+  /* Table cell styling */
+  .td {
+    padding: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+  }
+  
+  .noData {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Container */
+  .container {
+    width: 766px;
+    height: 349px;
+    padding: 1rem;
+    background: #FFFFFF;
+    border-radius: 16px;
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  .tableContainer {
+    overflow-y: auto; 
+    max-height: 170px;
+    width: 700px;
+  }
+  
